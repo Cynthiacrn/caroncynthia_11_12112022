@@ -1,0 +1,29 @@
+.home__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 63px;
+  gap: 43px;
+  .home__header {
+    height: 223px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 48px;
+      color: #fff;
+    }
+  }
+  .home__body--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px 60px;
+    padding: 56px 50px;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    margin: 0;
+    .home__body--card {
+      list-style: none;
+    }
+  }
+}
