@@ -14,3 +14,14 @@
     }
   }
 }
+
+@media (min-width: 390px) {
+  .header__container {
+    img {
+      height: 47px;
+    }
+    .header__container--navigation {
+      gap: 10px;
+    }
+  }
+}

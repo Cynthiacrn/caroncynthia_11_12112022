@@ -4,6 +4,8 @@
   margin-top: 63px;
   gap: 43px;
   .home__header {
+    background-position: center;
+    background-size: cover;
     height: 223px;
     border-radius: 25px;
     display: flex;
@@ -24,6 +26,24 @@
     margin: 0;
     .home__body--card {
       list-style: none;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .home__container {
+    .home__header {
+      height: 111px;
+      p {
+        font-size: 24px;
+        padding: 32px 16px;
+      }
+    }
+    .home__body--container {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      background: transparent;
     }
   }
 }

@@ -4,6 +4,11 @@ body {
   color: #ff6060;
 }
 
+@media (max-width: 390px) {
+  body {
+    padding: 20px;
+  }
+}
 .home__container {
   display: flex;
   flex-direction: column;
@@ -11,6 +16,8 @@ body {
   gap: 43px;
 }
 .home__container .home__header {
+  background-position: center;
+  background-size: cover;
   height: 223px;
   border-radius: 25px;
   display: flex;
@@ -34,6 +41,21 @@ body {
   list-style: none;
 }
 
+@media (max-width: 390px) {
+  .home__container .home__header {
+    height: 111px;
+  }
+  .home__container .home__header p {
+    font-size: 24px;
+    padding: 32px 16px;
+  }
+  .home__container .home__body--container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background: transparent;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
@@ -51,6 +73,14 @@ body {
   text-decoration: none;
 }
 
+@media (min-width: 390px) {
+  .header__container img {
+    height: 47px;
+  }
+  .header__container .header__container--navigation {
+    gap: 10px;
+  }
+}
 .accomodation-card__content {
   height: 340px;
   display: flex;
@@ -58,6 +88,8 @@ body {
   border-radius: 25px;
   overflow: hidden;
   background-color: #ff6060;
+  background-position: center;
+  background-size: cover;
 }
 .accomodation-card__content .accomodation-card__gradient {
   display: flex;
