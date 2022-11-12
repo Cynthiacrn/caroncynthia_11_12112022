@@ -7,18 +7,7 @@ function AccomodationCard({ title, id, cover }) {
         className="accomodation-card__content"
         style={{ backgroundImage: `url(${cover})` }}
       >
-        <div
-          className="accomodation-card__gradient"
-          style={{
-            display: "flex",
-            flexDirection: "col",
-            alignItems: "end",
-            width: "100%",
-            height: "100%",
-            background:
-              "linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%)",
-          }}
-        >
+        <div className="accomodation-card__gradient">
           <p className="accomodation-card__title">{title}</p>
         </div>
       </div>
