@@ -1,0 +1,38 @@
+.error__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 182px;
+  margin-top: 169px;
+  .error__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 66px;
+    .error__status {
+      font-size: 288px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .error__desrciption {
+      font-size: 36px;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+  .error__container {
+    gap: 133px;
+    .error__content {
+      gap: 11px;
+      .error__status {
+        font-size: 96px;
+      }
+      .error__desrciption {
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+}

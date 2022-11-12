@@ -11,17 +11,21 @@
     a {
       color: #ff6060;
       text-decoration: none;
+      font-size: 24px;
     }
   }
 }
 
-@media (min-width: 390px) {
+@media (max-width: 1240px) {
   .header__container {
     img {
       height: 47px;
     }
     .header__container--navigation {
       gap: 10px;
+      a {
+        font-size: 12px;
+      }
     }
   }
 }

@@ -1,4 +1,3 @@
-import Background from "../img/accomodation-card-bg.png";
 import { Link } from "react-router-dom";
 
 function AccomodationCard({ title, id, cover }) {
@@ -9,6 +8,7 @@ function AccomodationCard({ title, id, cover }) {
         style={{ backgroundImage: `url(${cover})` }}
       >
         <div
+          className="accomodation-card__gradient"
           style={{
             display: "flex",
             flexDirection: "col",

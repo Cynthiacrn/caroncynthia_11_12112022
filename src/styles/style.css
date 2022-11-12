@@ -4,7 +4,7 @@ body {
   color: #ff6060;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 1240px) {
   body {
     padding: 20px;
   }
@@ -41,7 +41,11 @@ body {
   list-style: none;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 1240px) {
+  .home__container {
+    margin-top: 10px;
+    gap: 22px;
+  }
   .home__container .home__header {
     height: 111px;
   }
@@ -54,8 +58,65 @@ body {
     flex-direction: column;
     padding: 0;
     background: transparent;
+    gap: 20px;
   }
 }
+.error__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 182px;
+  margin-top: 169px;
+}
+.error__container .error__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 66px;
+}
+.error__container .error__content .error__status {
+  font-size: 288px;
+  font-weight: 700;
+  margin: 0;
+}
+.error__container .error__content .error__desrciption {
+  font-size: 36px;
+  margin: 0;
+}
+
+@media (max-width: 1240px) {
+  .error__container {
+    gap: 133px;
+  }
+  .error__container .error__content {
+    gap: 11px;
+  }
+  .error__container .error__content .error__status {
+    font-size: 96px;
+  }
+  .error__container .error__content .error__desrciption {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+.about__container .about__header {
+  background-position: center;
+  background-size: cover;
+  height: 223px;
+  border-radius: 25px;
+  margin-top: 44px;
+}
+.about__container .about__body {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
 .header__container {
   display: flex;
   align-items: center;
@@ -71,14 +132,18 @@ body {
 .header__container .header__container--navigation a {
   color: #ff6060;
   text-decoration: none;
+  font-size: 24px;
 }
 
-@media (min-width: 390px) {
+@media (max-width: 1240px) {
   .header__container img {
     height: 47px;
   }
   .header__container .header__container--navigation {
     gap: 10px;
+  }
+  .header__container .header__container--navigation a {
+    font-size: 12px;
   }
 }
 .accomodation-card__content {
@@ -104,6 +169,37 @@ body {
   padding: 20px;
   margin: 0;
   color: #fff;
+  font-size: 18px;
+}
+
+.dropdown__container {
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+}
+.dropdown__container .dropdown__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  width: initial;
+  border-radius: 5px;
+  padding: 6px;
+  cursor: pointer;
+}
+.dropdown__container .dropdown__header .dropdown__name {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+.dropdown__container .dropdown__header .dropdown__icon {
+  height: 29px;
+  color: white;
+}
+.dropdown__container .dropdown__text {
+  width: initial;
+  padding: 10px;
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

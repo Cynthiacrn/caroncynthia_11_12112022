@@ -1,0 +1,17 @@
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  .about__header {
+    background-position: center;
+    background-size: cover;
+    height: 223px;
+    border-radius: 25px;
+    margin-top: 44px;
+  }
+  .about__body {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+  }
+}

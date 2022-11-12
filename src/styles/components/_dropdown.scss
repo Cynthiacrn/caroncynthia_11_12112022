@@ -1,0 +1,29 @@
+.dropdown__container {
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  .dropdown__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+    width: initial;
+    border-radius: 5px;
+    padding: 6px;
+    cursor: pointer;
+    .dropdown__name {
+      font-size: 24px;
+      color: white;
+      margin: 0;
+    }
+    .dropdown__icon {
+      height: 29px;
+      color: white;
+    }
+  }
+  .dropdown__text {
+    width: initial;
+    padding: 10px;
+    font-size: 24px;
+  }
+}
