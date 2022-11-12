@@ -7,11 +7,24 @@
     background-size: cover;
     height: 223px;
     border-radius: 25px;
-    margin-top: 44px;
   }
   .about__body {
+    max-width: 1023px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 31px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .about__container {
+    gap: 20px;
+    .about__body {
+      gap: 20px;
+    }
   }
 }

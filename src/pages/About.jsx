@@ -3,7 +3,7 @@ import Banner from "../img/about-banner.png";
 
 function About() {
   return (
-    <div className="about__container">
+    <div className="page about__container">
       <div
         className="about__header"
         style={{ backgroundImage: `url(${Banner})` }}

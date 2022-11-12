@@ -1,18 +1,24 @@
-body {
+html {
   font-family: "Montserrat", sans-serif;
-  padding: 40px 100px 40px 100px;
   color: #ff6060;
 }
 
+body {
+  margin: 0;
+}
+
+.page {
+  padding: 40px 100px 40px 100px;
+}
+
 @media (max-width: 1240px) {
-  body {
+  .page {
     padding: 20px;
   }
 }
 .home__container {
   display: flex;
   flex-direction: column;
-  margin-top: 63px;
   gap: 43px;
 }
 .home__container .home__header {
@@ -109,21 +115,34 @@ body {
   background-size: cover;
   height: 223px;
   border-radius: 25px;
-  margin-top: 44px;
 }
 .about__container .about__body {
+  max-width: 1023px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 31px;
 }
 
+@media (max-width: 1240px) {
+  .about__container {
+    gap: 20px;
+  }
+  .about__container .about__body {
+    gap: 20px;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header__container img {
+.header__container .header__logo {
   height: 68px;
+  color: #ff6060;
 }
 .header__container .header__container--navigation {
   display: flex;
@@ -146,6 +165,27 @@ body {
     font-size: 12px;
   }
 }
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  padding-top: 64px;
+  padding-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__container .footer__logo {
+  height: 40px;
+  color: #ffffff;
+}
+.footer__container .footer__text {
+  margin-top: 28px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
 .accomodation-card__content {
   height: 340px;
   display: flex;
@@ -182,7 +222,6 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #ff6060;
-  width: initial;
   border-radius: 5px;
   padding: 6px;
   cursor: pointer;

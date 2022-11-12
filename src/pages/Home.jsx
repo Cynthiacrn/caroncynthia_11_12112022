@@ -21,7 +21,7 @@ function Home() {
   }, [accomodations]);
 
   return (
-    <div className="home__container">
+    <div className="page home__container">
       <div
         className="home__header"
         style={{ backgroundImage: `url(${Banner})` }}

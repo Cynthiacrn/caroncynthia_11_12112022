@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  img {
+  .header__logo {
     height: 68px;
+    color: #ff6060;
   }
   .header__container--navigation {
     display: flex;

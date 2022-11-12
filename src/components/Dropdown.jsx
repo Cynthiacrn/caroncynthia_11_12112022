@@ -5,7 +5,6 @@ function Dropdown({ name, text }) {
 
   function handleOpen() {
     setOpen(!open);
-    console.log(open);
   }
 
   return (

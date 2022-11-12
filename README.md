@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm run style`
+
+Watch sass style changes and generate style.css file.
+
 ### `npm start`
 
 Runs the app in the development mode.\
