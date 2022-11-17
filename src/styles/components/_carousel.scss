@@ -1,0 +1,28 @@
+.carousel__container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  .carousel__picture {
+    height: 415px;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel__chevron-left {
+    position: absolute;
+    height: 80px;
+    bottom: 90px;
+    color: white;
+    cursor: pointer;
+  }
+  .carousel__chevron-right {
+    position: absolute;
+    height: 80px;
+    right: 100px;
+    bottom: 90px;
+    color: white;
+    cursor: pointer;
+  }
+}

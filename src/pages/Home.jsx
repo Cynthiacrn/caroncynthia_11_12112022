@@ -30,7 +30,7 @@ function Home() {
       </div>
       <ul className="home__body--container">
         {accomodations.map((accomodation) => (
-          <li className="home__body--card">
+          <li className="home__body--card" key={accomodation.id}>
             <AccomodationCard
               title={accomodation.title}
               id={accomodation.id}

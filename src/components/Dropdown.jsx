@@ -25,7 +25,11 @@ function Dropdown({ name, text }) {
           />
         )}
       </div>
-      {open ? <div className="dropdown__text">{text}</div> : <div></div>}
+      {open ? (
+        <div className="dropdown__text">{text}</div>
+      ) : (
+        <div className="dropdown__text--inactive"></div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,57 @@
+.accomodation__description-container {
+  margin-top: 30px;
+  .accomodation__description-header {
+    display: flex;
+    justify-content: space-between;
+    .accomodation__description-left {
+      .accomodation__description-title {
+        margin: 0;
+        font-size: 36px;
+        font-weight: 500;
+      }
+      .accomodation__description-location {
+        margin: 0;
+        font-size: 18px;
+      }
+    }
+  }
+  .accomodation__description-host-container {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    .accomodation__description-name {
+      width: min-content;
+      font-size: 18px;
+      text-align: end;
+    }
+    .accomodation__description-picture-container {
+      border-radius: 100%;
+      height: 64px;
+      background-color: #c4c4c4;
+      .accomodation__description-picture {
+        border-radius: 100%;
+        height: 64px;
+      }
+    }
+  }
+}
+.accomodation__description-tag-container {
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  .accomodation__description-tag {
+    list-style-type: none;
+  }
+}
+
+.accomodation__description-footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  gap: 76px;
+  .accomodation__description-equipement {
+    list-style-type: none;
+  }
+}
