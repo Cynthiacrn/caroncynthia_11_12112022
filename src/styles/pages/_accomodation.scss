@@ -64,13 +64,34 @@
 }
 
 @media (max-width: 1240px) {
-  .accomodation__description-header {
-    flex-direction: column;
-    .accomodation__description-right {
-      flex-direction: row-reverse;
-      align-items: center;
+  .accomodation__description-container {
+    .accomodation__description-header {
+      flex-direction: column;
+      .accomodation__description-left {
+        .accomodation__description-title {
+          font-size: 18px;
+        }
+        .accomodation__description-location {
+          font-size: 14px;
+        }
+      }
+      .accomodation__description-right {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        .accomodation__description-name {
+          font-size: 12px;
+        }
+        .accomodation__description-picture-container {
+          height: 32px;
+          .accomodation__description-picture {
+            height: 32px;
+          }
+        }
+      }
     }
   }
+
   .accomodation__description-tag-container {
     display: flex;
     flex-wrap: wrap;

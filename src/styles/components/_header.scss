@@ -25,13 +25,16 @@
 
 @media (max-width: 1240px) {
   .header__container {
-    img {
+    .header__logo {
       height: 47px;
+      width: 145px;
     }
     .header__container--navigation {
       gap: 10px;
-      a {
-        font-size: 12px;
+      .header__container--navigation-link {
+        .link {
+          font-size: 12px;
+        }
       }
     }
   }

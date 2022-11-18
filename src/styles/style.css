@@ -200,12 +200,28 @@ body {
 }
 
 @media (max-width: 1240px) {
-  .accomodation__description-header {
+  .accomodation__description-container .accomodation__description-header {
     flex-direction: column;
   }
-  .accomodation__description-header .accomodation__description-right {
+  .accomodation__description-container .accomodation__description-header .accomodation__description-left .accomodation__description-title {
+    font-size: 18px;
+  }
+  .accomodation__description-container .accomodation__description-header .accomodation__description-left .accomodation__description-location {
+    font-size: 14px;
+  }
+  .accomodation__description-container .accomodation__description-header .accomodation__description-right {
     flex-direction: row-reverse;
     align-items: center;
+    justify-content: space-between;
+  }
+  .accomodation__description-container .accomodation__description-header .accomodation__description-right .accomodation__description-name {
+    font-size: 12px;
+  }
+  .accomodation__description-container .accomodation__description-header .accomodation__description-right .accomodation__description-picture-container {
+    height: 32px;
+  }
+  .accomodation__description-container .accomodation__description-header .accomodation__description-right .accomodation__description-picture-container .accomodation__description-picture {
+    height: 32px;
   }
   .accomodation__description-tag-container {
     display: flex;
@@ -242,13 +258,14 @@ body {
 }
 
 @media (max-width: 1240px) {
-  .header__container img {
+  .header__container .header__logo {
     height: 47px;
+    width: 145px;
   }
   .header__container .header__container--navigation {
     gap: 10px;
   }
-  .header__container .header__container--navigation a {
+  .header__container .header__container--navigation .header__container--navigation-link .link {
     font-size: 12px;
   }
 }
@@ -273,6 +290,11 @@ body {
   color: #ffffff;
 }
 
+@media (max-width: 1240px) {
+  .footer__container .footer__text {
+    font-size: 12px;
+  }
+}
 .accomodation-card__content {
   height: 340px;
   display: flex;
@@ -333,6 +355,17 @@ body {
   background-color: white;
 }
 
+@media (max-width: 1240px) {
+  .dropdown__container .dropdown__header .dropdown__name {
+    font-size: 13px;
+  }
+  .dropdown__container .dropdown__header .dropdown__icon {
+    height: 18px;
+  }
+  .dropdown__container .dropdown__text {
+    font-size: 13px;
+  }
+}
 .carousel {
   overflow: hidden;
   position: relative;
@@ -384,6 +417,11 @@ body {
   font-size: 14px;
 }
 
+@media (max-width: 1240px) {
+  .tag {
+    font-size: 10px;
+  }
+}
 .star__rating {
   display: flex;
   gap: 10px;
@@ -395,6 +433,13 @@ body {
 .star__rating .star {
   color: #ff6060;
   font-size: 25px;
+}
+
+@media (max-width: 1240px) {
+  .star__rating .empty-star,
+  .star__rating .star {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
