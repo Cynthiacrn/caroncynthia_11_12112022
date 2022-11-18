@@ -151,29 +151,36 @@ body {
   margin: 0;
   font-size: 18px;
 }
-.accomodation__description-container .accomodation__description-host-container {
+.accomodation__description-container .accomodation__description-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.accomodation__description-container .accomodation__description-right .accomodation__description-host-container {
   display: flex;
   width: 50%;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
 }
-.accomodation__description-container .accomodation__description-host-container .accomodation__description-name {
+.accomodation__description-container .accomodation__description-right .accomodation__description-host-container .accomodation__description-name {
   width: min-content;
   font-size: 18px;
   text-align: end;
 }
-.accomodation__description-container .accomodation__description-host-container .accomodation__description-picture-container {
+.accomodation__description-container .accomodation__description-right .accomodation__description-host-container .accomodation__description-picture-container {
   border-radius: 100%;
   height: 64px;
   background-color: #c4c4c4;
 }
-.accomodation__description-container .accomodation__description-host-container .accomodation__description-picture-container .accomodation__description-picture {
+.accomodation__description-container .accomodation__description-right .accomodation__description-host-container .accomodation__description-picture-container .accomodation__description-picture {
   border-radius: 100%;
   height: 64px;
 }
 
 .accomodation__description-tag-container {
+  margin-top: 20px;
+  margin-bottom: 0;
   padding: 0;
   display: flex;
   gap: 10px;
@@ -192,6 +199,23 @@ body {
   list-style-type: none;
 }
 
+@media (max-width: 1240px) {
+  .accomodation__description-header {
+    flex-direction: column;
+  }
+  .accomodation__description-header .accomodation__description-right {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .accomodation__description-tag-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .accomodation__description-footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
@@ -205,10 +229,16 @@ body {
   display: flex;
   gap: 57px;
 }
-.header__container .header__container--navigation a {
+.header__container .header__container--navigation .header__container--navigation-link {
+  line-height: 142.6%;
+}
+.header__container .header__container--navigation .header__container--navigation-link .link {
   color: #ff6060;
   text-decoration: none;
   font-size: 24px;
+}
+.header__container .active {
+  border-bottom: 1px solid #ff6060;
 }
 
 @media (max-width: 1240px) {
@@ -303,35 +333,48 @@ body {
   background-color: white;
 }
 
-.carousel__container {
-  display: flex;
-  flex-wrap: nowrap;
+.carousel {
   overflow: hidden;
+  position: relative;
+  border-radius: 1%;
 }
-.carousel__container .carousel__picture {
-  height: 415px;
-  min-width: 100%;
-  width: 100%;
+.carousel .carousel__container {
   display: flex;
+  transition: transform 0.5s ease;
+  height: 455px;
+}
+.carousel .carousel__container .carousel__img {
+  flex-shrink: 0;
+  width: 100%;
+  object-fit: cover;
+}
+.carousel .carousel__controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  width: calc(100% - 30px);
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 0 10px;
 }
-.carousel__container .carousel__chevron-left {
-  position: absolute;
-  height: 80px;
-  bottom: 90px;
-  color: white;
-  cursor: pointer;
-}
-.carousel__container .carousel__chevron-right {
-  position: absolute;
-  height: 80px;
-  right: 100px;
-  bottom: 90px;
-  color: white;
+.carousel .carousel__controls .chevron {
+  width: 90px !important;
+  height: auto !important;
   cursor: pointer;
 }
 
+@media (max-width: 1240px) {
+  .carousel {
+    height: 255px;
+  }
+  .carousel .carousel__container .carousel__img {
+    height: 255px;
+  }
+  .carousel .carousel__controls .chevron {
+    width: 45px !important;
+  }
+}
 .tag {
   padding: 5px 30px;
   background-color: #ff6060;
@@ -339,6 +382,19 @@ body {
   border-radius: 15px;
   width: fit-content;
   font-size: 14px;
+}
+
+.star__rating {
+  display: flex;
+  gap: 10px;
+}
+.star__rating .empty-star {
+  color: #e3e3e3;
+  font-size: 25px;
+}
+.star__rating .star {
+  color: #ff6060;
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

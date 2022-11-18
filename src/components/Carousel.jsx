@@ -3,32 +3,59 @@ import { useState } from "react";
 function Carousel({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  function prev() {
-    console.log("test");
-    if (currentIndex === pictures.length - 1) {
-      return setCurrentIndex(0);
+  const pictureSize = () => {
+    const carouselPicture = document.querySelector(".carousel__container img");
+    if (!carouselPicture) {
+      return 0;
     }
-    return setCurrentIndex(currentIndex + 1);
-  }
+    return carouselPicture.width;
+  };
+
+  const onNext = () => {
+    if (currentIndex === pictures.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const onPrev = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex(pictures.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
 
   return (
-    <div className="carousel__container">
-      <img
-        className="carousel__chevron-left"
-        alt="chevron left icon"
-        src="/img/icons/chevron-left.svg "
-        onClick={prev}
-      />
-      {pictures.map((picture, index) => (
-        <div className="carousel__picture" key={index}>
-          <img alt="appartement" src={picture} />
-        </div>
-      ))}
-      <img
-        className="carousel__chevron-right"
-        alt="chevron right icon"
-        src="/img/icons/chevron-right.svg "
-      />
+    <div className="carousel">
+      <div
+        className="carousel__container"
+        style={{ transform: `translateX(-${currentIndex * pictureSize()}px)` }}
+      >
+        {pictures.map((picture, index) => (
+          <img
+            alt="appartement"
+            src={picture}
+            key={index}
+            className="carousel__img"
+          />
+        ))}
+      </div>
+      <div className={"carousel__controls"}>
+        <img
+          src="/img/icons/chevron-left.svg"
+          className="chevron"
+          onClick={onPrev}
+          alt="chevron left"
+        />
+        <img
+          src="/img/icons/chevron-right.svg"
+          className="chevron"
+          onClick={onNext}
+          alt="chevron right"
+        />
+      </div>
     </div>
   );
 }

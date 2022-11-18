@@ -15,13 +15,13 @@ function Dropdown({ name, text }) {
           <img
             className="dropdown__icon"
             alt="chevron up icon"
-            src="/img/icons/chevron-up.svg "
+            src="/img/icons/chevron-up.svg"
           />
         ) : (
           <img
             className="dropdown__icon"
             alt="chevron down icon"
-            src="/img/icons/chevron-down.svg "
+            src="/img/icons/chevron-down.svg"
           />
         )}
       </div>

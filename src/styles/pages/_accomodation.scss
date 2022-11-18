@@ -15,29 +15,36 @@
       }
     }
   }
-  .accomodation__description-host-container {
+  .accomodation__description-right {
     display: flex;
-    width: 50%;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-    .accomodation__description-name {
-      width: min-content;
-      font-size: 18px;
-      text-align: end;
-    }
-    .accomodation__description-picture-container {
-      border-radius: 100%;
-      height: 64px;
-      background-color: #c4c4c4;
-      .accomodation__description-picture {
+    flex-direction: column;
+    align-items: flex-end;
+    .accomodation__description-host-container {
+      display: flex;
+      width: 50%;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      .accomodation__description-name {
+        width: min-content;
+        font-size: 18px;
+        text-align: end;
+      }
+      .accomodation__description-picture-container {
         border-radius: 100%;
         height: 64px;
+        background-color: #c4c4c4;
+        .accomodation__description-picture {
+          border-radius: 100%;
+          height: 64px;
+        }
       }
     }
   }
 }
 .accomodation__description-tag-container {
+  margin-top: 20px;
+  margin-bottom: 0;
   padding: 0;
   display: flex;
   gap: 10px;
@@ -53,5 +60,23 @@
   gap: 76px;
   .accomodation__description-equipement {
     list-style-type: none;
+  }
+}
+
+@media (max-width: 1240px) {
+  .accomodation__description-header {
+    flex-direction: column;
+    .accomodation__description-right {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+  .accomodation__description-tag-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .accomodation__description-footer {
+    flex-direction: column;
+    gap: 20px;
   }
 }

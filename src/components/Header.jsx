@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -34,9 +34,24 @@ function Header() {
           />
         </svg>
       </Link>
+
       <nav className="header__container--navigation">
-        <Link to="/">Accueil</Link>
-        <Link to="/about">A propos</Link>
+        <div className="header__container--navigation-link">
+          <NavLink
+            className={({ isActive }) => `link ${isActive ? "active" : ""}`}
+            to="/"
+          >
+            Accueil
+          </NavLink>
+        </div>
+        <div className="header__container--navigation-link">
+          <NavLink
+            className={({ isActive }) => `link ${isActive ? "active" : ""}`}
+            to="/about"
+          >
+            A propos
+          </NavLink>
+        </div>
       </nav>
     </div>
   );

@@ -1,28 +1,46 @@
-.carousel__container {
-  display: flex;
-  flex-wrap: nowrap;
+.carousel {
   overflow: hidden;
-  .carousel__picture {
-    height: 415px;
-    min-width: 100%;
-    width: 100%;
+  position: relative;
+  border-radius: 1%;
+  .carousel__container {
     display: flex;
+    transition: transform 0.5s ease;
+    height: 455px;
+    .carousel__img {
+      flex-shrink: 0;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .carousel__controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: calc(100% - 30px);
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 0 10px;
+    .chevron {
+      width: 90px !important;
+      height: auto !important;
+      cursor: pointer;
+    }
   }
-  .carousel__chevron-left {
-    position: absolute;
-    height: 80px;
-    bottom: 90px;
-    color: white;
-    cursor: pointer;
-  }
-  .carousel__chevron-right {
-    position: absolute;
-    height: 80px;
-    right: 100px;
-    bottom: 90px;
-    color: white;
-    cursor: pointer;
+}
+
+@media (max-width: 1240px) {
+  .carousel {
+    height: 255px;
+    .carousel__container {
+      .carousel__img {
+        height: 255px;
+      }
+    }
+    .carousel__controls {
+      .chevron {
+        width: 45px !important;
+      }
+    }
   }
 }
