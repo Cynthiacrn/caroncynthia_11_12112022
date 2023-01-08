@@ -1,5 +1,5 @@
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-
 import Accommodation from "./pages/Accommodation";
 import Error from "./pages/Error";
 import About from "./pages/About";
